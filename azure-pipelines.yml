@@ -20,11 +20,13 @@ steps:
     command: 'restore'
     projects: '$(myproject)'
     feedsToUse: 'select'
+
 - task: DotNetCoreCLI@2
   displayName: 'Build'
   inputs:
     command: 'build'
     projects: '$(myproject)'
+
 - task: DotNetCoreCLI@2
   displayName: 'Publish project...'
   inputs:
@@ -38,5 +40,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'UniversityHostel.API'
     publishLocation: 'Container'
