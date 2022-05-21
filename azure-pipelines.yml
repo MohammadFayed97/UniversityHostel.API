@@ -11,7 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  myproject: 'UniversityHostel/Server/UniversityHostel.Server.csproj'
+  myproject: 'src/Root/UniversityHostel.API/UniversityHostel.API.csproj'
 
 steps:
 - task: DotNetCoreCLI@2
